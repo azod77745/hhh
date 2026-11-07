@@ -1,3 +1,20 @@
+async function fetchWithTimeout(url) {
+    const controller = new AbortController();
+
+    const timer = setTimeout(() => {
+        controller.abort();
+    }, 15000);
+
+    try {
+        const response = await fetch(url, {
+            signal: controller.signal
+        });
+
+        return response;
+    } finally {
+        clearTimeout(timer);
+    }
+}
 const cityInput = document.getElementById("cityInput");
 const cityName = document.getElementById("cityName");
 const temperature = document.getElementById("temp");

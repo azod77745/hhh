@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уютная Погода</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Погода в России</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Введите город (напр. Москва)...">
+            <button onclick="getWeather()">Найти</button>
+        </div>
+        <div id="weatherResult" class="weather-card">
+            <h2 id="cityName">Выберите город</h2>
+            <p id="temp">--°C</p>
+            <p id="desc">Введите название города, чтобы узнать погоду</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
